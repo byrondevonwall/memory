@@ -1,0 +1,118 @@
+/*********************************************************
+ele
+**********************************************************/
+body {
+  background: blue;
+  font-family: 'Orbitron', sans-serif;
+  color: white
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+}
+
+.memory-name {
+  text-align: justify;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 4em;
+}
+
+.fa {
+  color: white;
+}
+
+/*********************************************************
+new-game page styling
+**********************************************************/
+/*.fa {
+  color: white;
+}*/
+
+.choice-menu {
+  display: inline-block;
+  margin: 10% 0 0 40%;
+}
+
+
+.new-game-text {
+  display: inline-block;
+  margin: 0 0 0 40px;
+  padding: 40px 0 0 0;
+  text-align: center;
+  font-family: "orbitron", sans-serif;
+  color: white;
+  font-size: 2em;
+}
+
+.easy-mode-box {
+  text-align: center;
+  font-family: "orbitron", sans-serif;
+  color: white;
+  font-size: 2em;
+  border: 2px solid white;
+  margin: 50px 0 0 20px;
+  padding: 10px 0;
+  background: blue;
+}
+
+.hard-mode-box {
+  text-align: center;
+  font-family: "orbitron", sans-serif;
+  color: white;
+  font-size: 2em;
+  border: 2px solid white;
+  margin: 20px 0 0 20px;
+  padding: 10px 0;
+  background: blue;
+}
+
+.easy-mode-box:hover {
+  -webkit-transition-property: background;
+  background: lightcoral;
+}
+
+.hard-mode-box:hover {
+  -webkit-transition-property: background;
+  background: lightcoral;
+}
+
+
+/*********************************************************
+easy mode page styling (index)
+**********************************************************/
+
+.easy-mode-header {
+  display: block;
+  margin: 0 0 0 40%;
+}
+
+.heart-row {
+  margin: 0 0 0 5%;
+}
+
+.heart-row li {
+  display: inline-block;
+}
+
+.timer {
+  float: right;
+  margin: 0 5% 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************
+
+**********************************************************/
