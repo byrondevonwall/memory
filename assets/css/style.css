@@ -140,6 +140,8 @@ easy mode page styling (index.html)
   border-radius: .4em;
 }
 
+/****click transitions****/
+
 input:checked +.card {
   background: lightcoral;
   -webkit-transform: rotateY(180deg);
@@ -150,12 +152,99 @@ input:checked +.card .trophy {
   transition-delay: .5s;
 }
 
+input:checked +.card .star {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .ambulance {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .bomb {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .bike {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .cloud {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .eye {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .fire {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+input:checked +.card .bug {
+  opacity: 1;
+  transition-delay: .5s;
+}
 
 .trophy {
   position: absolute;
   margin: 47px 0 0 53px;
   opacity: 0;
 }
+
+.star {
+  position: absolute;
+  margin: 47px 0 0 53px;
+  opacity: 0;
+}
+
+.ambulance {
+  position: absolute;
+  margin: 50px 0 0 43px;
+  opacity: 0;
+}
+
+.bomb {
+  position: absolute;
+  margin: 47px 0 0 53px;
+  opacity: 0;
+}
+
+.bike {
+  position: absolute;
+  margin: 47px 0 0 40px;
+  opacity: 0;
+}
+
+.cloud {
+  position: absolute;
+  margin: 47px 0 0 45px;
+  opacity: 0;
+}
+
+.eye {
+  position: absolute;
+  margin: 47px 0 0 46px;
+  opacity: 0;
+}
+
+.fire {
+  position: absolute;
+  margin: 47px 0 0 55px;
+  opacity: 0;
+}
+.bug {
+  position: absolute;
+  margin: 47px 0 0 50px;
+  opacity: 0;
+}
+
 
 
 
