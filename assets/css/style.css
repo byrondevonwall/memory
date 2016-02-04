@@ -1,5 +1,5 @@
 /*********************************************************
-ele
+element and cross-page styling
 **********************************************************/
 body {
   background: blue;
@@ -12,6 +12,12 @@ a {
 }
 
 header {
+}
+
+input {
+  width: 8em;
+  height: 8em;
+  display: none;
 }
 
 .memory-name {
@@ -28,9 +34,6 @@ header {
 /*********************************************************
 new-game page styling
 **********************************************************/
-/*.fa {
-  color: white;
-}*/
 
 .choice-menu {
   display: inline-block;
@@ -82,8 +85,10 @@ new-game page styling
 
 
 /*********************************************************
-easy mode page styling (index)
+easy mode page styling (index.html)
 **********************************************************/
+
+/****header****/
 
 .easy-mode-header {
   display: block;
@@ -91,7 +96,12 @@ easy mode page styling (index)
 }
 
 .heart-row {
+  display: inline-block;
   margin: 0 0 0 5%;
+}
+
+.heart-row ul {
+  display: inline;
 }
 
 .heart-row li {
@@ -101,6 +111,38 @@ easy mode page styling (index)
 .timer {
   float: right;
   margin: 0 5% 0 0;
+}
+
+/****game body****/
+.game-body {
+  margin: 5% 0 0 15.5%;
+  width: 1000px;
+}
+
+.card-row-1 li {
+  display: inline-block;
+}
+
+.card-row-2 li {
+  display: inline-block;
+}
+
+.card-row-3 li {
+  display: inline-block;
+}
+
+.card {
+  width: 10em;
+  height: 10em;
+  background: steelblue;
+  display: block;
+  transition: background 1s, -webkit-transform 1s;
+  border-radius: .4em;
+}
+
+input:checked +.card {
+  background: lightcoral;
+  -webkit-transform: rotateY(180deg);
 }
 
 
