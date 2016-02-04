@@ -97,7 +97,7 @@ easy mode page styling (index.html)
 
 .heart-row {
   display: inline-block;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 16%;
 }
 
 .heart-row ul {
@@ -110,7 +110,7 @@ easy mode page styling (index.html)
 
 .timer {
   float: right;
-  margin: 0 5% 0 0;
+  margin: 0 16% 0 0;
 }
 
 /****game body****/
@@ -145,6 +145,17 @@ input:checked +.card {
   -webkit-transform: rotateY(180deg);
 }
 
+input:checked +.card .trophy {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+
+.trophy {
+  position: absolute;
+  margin: 47px 0 0 53px;
+  opacity: 0;
+}
 
 
 
