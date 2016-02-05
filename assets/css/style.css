@@ -12,8 +12,6 @@ a {
   color: white;
 }
 
-header {
-}
 
 input {
   width: 8em;
@@ -28,9 +26,6 @@ input {
   font-size: 4em;
 }
 
-/*.fa {
-  color: white;
-}*/
 
 /*********************************************************
 new-game page styling
@@ -57,7 +52,7 @@ new-game page styling
   margin: 50px 0 0 20px;
   padding: 10px 0;
   background: blue;
-  transform: perspective(200px) rotateY(-15deg)
+    transform: perspective(200px) rotateY(-15deg)
 }
 
 .hard-mode-box {
@@ -73,12 +68,12 @@ new-game page styling
 
 .easy-mode-box:hover {
   -webkit-transition-property: background;
-  background: lightcoral;
+  background: paleturquoise;
 }
 
 .hard-mode-box:hover {
   -webkit-transition-property: background;
-  background: lightcoral;
+  background: turquoise;
 }
 
 
@@ -146,7 +141,7 @@ easy mode page styling (index.html)
 /****click transitions****/
 
 input:checked +.card {
-  background: lightcoral;
+  background: powderblue;
   -webkit-transform: rotateY(180deg);
 }
 
@@ -248,6 +243,10 @@ input:checked +.card .bug {
   opacity: 0;
 }
 
+/*********************************************************
+footer
+**********************************************************/
+
 
 .return-to-menu {
   display: inline-block;
@@ -255,10 +254,14 @@ input:checked +.card .bug {
   font-size: 2em;
   border: 2px solid white;
   margin: 50px 0 0 42%;
-  padding: 10px 10px;
+  padding: 10px 10px 5px 10px;
   background: blue;
 }
 
+.return-to-menu:hover {
+  -webkit-transition-property: background;
+  background: cornflowerblue;
+}
 
 
 
