@@ -4,12 +4,13 @@
     <title>MEMORY | easy mode</title>
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/animations.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <audio src="./assets/audio/got-theme.mp3" autoplay loop></audio>
-
+    <div id="entrance-animation" class="fadeIn">
     <header>
         <div class="easy-mode-header">
           <div class="memory-name">
@@ -29,8 +30,8 @@
       <span class="timer">0:04:00</span>
     </header>
 
-    <section class="game-body">
-
+    <main class="margin-fix-2">
+    <section class="game-body group">
       <ul class="card-row-1">
         <li>
           <input type="checkbox" id="1-1">
@@ -86,6 +87,7 @@
           </label>
         </li>
       </ul>
+
 
       <ul class="card-row-2">
         <li>
@@ -200,12 +202,14 @@
       </ul>
 
     </section>
+  </main>
 
     <footer>
       <nav>
         <a href="new-game.html"><div class="return-to-menu">Back to menu</div></a>
       </nav>
     </footer>
+  </div>
 
 
   </body>

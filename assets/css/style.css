@@ -107,20 +107,46 @@ easy mode page styling (index.html)
 }
 
 /****game body****/
-.game-body {
-  margin: 5% 0 0 15.5%;
-  width: 1000px;
+.margin-fix{
+  margin: 2% 0 0 3.5%;
 }
+
+.margin-fix-2 {
+  margin: 2% 0 0 15%;
+}
+
+.game-body {
+  /*margin: 5% 15% 0 15%;*/
+  margin: auto;
+}
+
 
 .card-row-1 li {
   display: inline-block;
 }
+
 
 .card-row-2 li {
   display: inline-block;
 }
 
 .card-row-3 li {
+  display: inline-block;
+}
+
+.card-row-4 li {
+  display: inline-block;
+}
+
+.card-row-4 li {
+  display: inline-block;
+}
+
+.card-row-5 li {
+  display: inline-block;
+}
+
+.card-row-6 li {
   display: inline-block;
 }
 
@@ -190,6 +216,8 @@ input:checked +.card .bug {
   transition-delay: .5s;
 }
 
+
+/****icon original state****/
 .trophy {
   position: absolute;
   margin: 47px 0 0 53px;
@@ -252,20 +280,55 @@ footer
   display: inline-block;
   text-align: center;
   font-size: 2em;
-  border: 2px solid white;
-  margin: 50px 0 0 42%;
+  /*border: 2px solid white;*/
+  margin: 50px 0 20px 42%;
   padding: 10px 10px 5px 10px;
   background: blue;
+  border-radius: .3em;
 }
 
 .return-to-menu:hover {
   -webkit-transition-property: background;
   background: cornflowerblue;
+  box-shadow: 2px 2px 2px 2px steelblue;
+
+
 }
 
 
+/*********************************************************
+clearfix (experimental-prolly not relevant)
+**********************************************************/
 
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*********************************************************
+media queries
+**********************************************************/
+
+@media (max-width: 1420px) {
+  .game-body{
+    width: 2000px;
+  }
+}
+
+@media (min-width: 1620px) {
+  .margin-fix {
+    margin: 2% 0 0 15%;
+  }
+}
+
+@media (min-width: 1620px) {
+  .margin-fix-2 {
+    margin: 2% 0 0 23%;
+  }
+}
 
 
 
