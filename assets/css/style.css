@@ -60,6 +60,7 @@ new-game page styling
   margin: 50px 0 0 20px;
   padding: 10px 0;
   background: blue;
+  transform: perspective(200px) rotateY(-15deg)
 }
 
 .hard-mode-box {
@@ -71,6 +72,8 @@ new-game page styling
   margin: 20px 0 0 20px;
   padding: 10px 0;
   background: blue;
+  transform: perspective(200px) rotateY(15deg)
+  /*add transform here*/
 }
 
 .easy-mode-box:hover {
@@ -138,6 +141,7 @@ easy mode page styling (index.html)
   display: block;
   transition: background 1s, -webkit-transform 1s;
   border-radius: .4em;
+  box-shadow: 2px 2px 2px 1px darkblue;
 }
 
 /****click transitions****/
