@@ -7,199 +7,147 @@
     <link href="./assets/css/animations.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
   <body>
     <audio src="./assets/audio/got-theme.mp3"></audio>
     <div id="entrance-animation" class="fadeIn">
     <header>
-        <div class="easy-mode-header">
+        <div class="header">
           <div class="memory-name">
             <span>Mem</span><i class="fa fa-lightbulb-o"></i><span>ry</p>
           </div>
       </div>
 
-      <ul class="heart-row">
-        <li><i class="fa fa-heart"></i></li>
-        <li><i class="fa fa-heart"></i></li>
-        <li><i class="fa fa-heart"></i></li>
-        <li><i class="fa fa-heart"></i></li>
-        <li><i class="fa fa-heart-o"></i></li>
-        <li><i class="fa fa-heart-o"></i></li>
-      </ul>
+         <!-- class="heart-row">
+           <i class="fa fa-heart"></i>
+           <i class="fa fa-heart"></i>
+           <i class="fa fa-heart"></i>
+           <i class="fa fa-heart"></i>
+           <i class="fa fa-heart-o"></i>
+           <i class="fa fa-heart-o"></i>
+      </ul> -->
 
-      <span class="timer">0:04:00</span>
+      <span class="timer"></span>
+
+
     </header>
 
-    <main class="margin-fix-2">
+  <div class="enter-boxes">HOW MANY BOXES DO YOU WANT?</div>
+    <input type="text" value="" class="boxNum">
+
+    <input class="submit" type="submit" value="gimme boxes">
+
+
+
     <section class="game-body group">
-      <ul class="card-row-1">
-        <li>
-          <input type="checkbox" id="1-1">
-          <label class="card" for="1-1">
-            <div class="trophy">
-              <i class="fa fa-trophy fa-4x"></i>
-            </div>
-          </label>
-        </li>
 
-        <li>
-          <input type="checkbox" id="1-2">
-          <label class="card" for="1-2">
+          <!-- <span class="card">
+              <i class="fa fa-trophy fa-4x"></i>
+          </span> -->
+
+          <!-- <span class="card">
             <div class="star">
               <i class="fa fa-star fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="1-3">
-          <label class="card" for="1-3">
+          <span class="card">
             <div class="ambulance">
-              <i class="fa fa-ambulance fa-4x"></i>
+              <i class="   fa fa-ambulance fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="1-4">
-          <label class="card" for="1-4">
+          <span class="card">
             <div class="bomb">
-              <i class="fa fa-bomb fa-4x"></i>
+              <i class="   fa fa-bomb fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="1-5">
-          <label class="card" for="1-5">
+          <span class="card">
             <div class="bike">
-              <i class="fa fa-bicycle fa-4x"></i>
+              <i class="   fa fa-bicycle fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="1-6">
-          <label class="card" for="1-6">
+          <span class="card">
             <div class="cloud">
-              <i class="fa fa-cloud fa-4x"></i>
+              <i class="   fa fa-cloud fa-4x"></i>
             </div>
-          </label>
-        </li>
-      </ul>
+          </span>
 
-
-      <ul class="card-row-2">
-        <li>
-          <input type="checkbox" id="2-1">
-          <label class="card" for="2-1">
+          <span class="card">
             <div class="eye">
-              <i class="fa fa-eye fa-4x"></i>
+              <i class="   fa fa-eye fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="2-2">
-          <label class="card" for="2-2">
+          <span class="card">
             <div class="fire">
-              <i class="fa fa-fire fa-4x"></i>
+              <i class="   fa fa-fire fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="2-3">
-          <label class="card" for="2-3">
+          <span class="card">
             <div class="bug">
-              <i class="fa fa-bug fa-4x"></i>
+              <i class="   fa fa-bug fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="2-4">
-          <label class="card" for="2-4">
+          <span class="card">
             <div class="trophy">
-              <i class="fa fa-trophy fa-4x"></i>
+              <i class="   fa fa-trophy fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="2-5">
-          <label class="card" for="2-5">
+          <span class="card">
             <div class="bike">
-              <i class="fa fa-bicycle fa-4x"></i>
+              <i class="   fa fa-bicycle fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="2-6">
-          <label class="card" for="2-6">
+          <span class="card" >
             <div class="bomb">
-              <i class="fa fa-bomb fa-4x"></i>
+              <i class="   fa fa-bomb fa-4x"></i>
             </div>
-          </label>
-        </li>
-      </ul>
+          </span>
 
-      <ul class="card-row-3">
-        <li>
-          <input type="checkbox" id="3-1">
-          <label class="card" for="3-1">
+          <span class="card">
             <div class="ambulance">
-              <i class="fa fa-ambulance fa-4x"></i>
+              <i class="   fa fa-ambulance fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="3-2">
-          <label class="card" for="3-2">
+          <span class="card">
             <div class="star">
-              <i class="fa fa-star fa-4x"></i>
+              <i class="   fa fa-star fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="3-3">
-          <label class="card" for="3-3">
+          <span class="card">
             <div class="eye">
               <i class="fa fa-eye fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="3-4">
-          <label class="card" for="3-4">
+          <span class="card">
             <div class="cloud">
               <i class="fa fa-cloud fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="3-5">
-          <label class="card" for="3-5">
+          <span class="card">
             <div class="bug">
-              <i class="fa fa-bug fa-4x"></i>
+              <i class="   fa fa-bug fa-4x"></i>
             </div>
-          </label>
-        </li>
+          </span>
 
-        <li>
-          <input type="checkbox" id="3-6">
-          <label class="card" for="3-6">
+          <span class="card">
             <div class="fire">
               <i class="fa fa-fire fa-4x"></i>
             </div>
-          </label>
-        </li>
-      </ul>
+          </span> -->
+
 
     </section>
   </main>
@@ -211,6 +159,6 @@
     </footer>
   </div>
 
-
+  <script src="./assets/js/scripts.js"></script>
   </body>
 </html>

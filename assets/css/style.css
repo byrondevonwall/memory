@@ -1,6 +1,10 @@
 /*********************************************************
 element and cross-page styling
 **********************************************************/
+*{
+  box-sizing: border-box;
+}
+
 body {
   background: blue;
   font-family: 'Orbitron', sans-serif;
@@ -13,11 +17,6 @@ a {
 }
 
 
-input {
-  width: 8em;
-  height: 8em;
-  display: none;
-}
 
 .memory-name {
   text-align: justify;
@@ -93,61 +92,24 @@ easy mode page styling (index.html)
   margin: 0 0 0 16%;
 }
 
-.heart-row ul {
-  display: inline;
-}
-
-.heart-row li {
-  display: inline-block;
-}
-
 .timer {
   float: right;
   margin: 0 16% 0 0;
 }
 
 /****game body****/
-.margin-fix{
-  margin: 2% 0 0 3.5%;
-}
 
-.margin-fix-2 {
-  margin: 2% 0 0 15%;
-}
 
 .game-body {
-  /*margin: 5% 15% 0 15%;*/
-  margin: auto;
+  margin: 5% 15%;
+  position: relative;
+  /*margin: auto;*/
 }
 
-
-.card-row-1 li {
-  display: inline-block;
-}
-
-
-.card-row-2 li {
-  display: inline-block;
-}
-
-.card-row-3 li {
-  display: inline-block;
-}
-
-.card-row-4 li {
-  display: inline-block;
-}
-
-.card-row-4 li {
-  display: inline-block;
-}
-
-.card-row-5 li {
-  display: inline-block;
-}
-
-.card-row-6 li {
-  display: inline-block;
+.game-body span {
+  position: relative;
+  float: left;
+  overflow: hidden;
 }
 
 .card {
@@ -158,6 +120,10 @@ easy mode page styling (index.html)
   transition: background 1s, -webkit-transform 1s;
   border-radius: .4em;
   border: 1px solid darkblue;
+  margin: 3px;
+  color: rgba(255,255,255,0);
+  text-align: center;
+  padding-top: 5%;
 }
 
 .card:hover {
@@ -166,109 +132,14 @@ easy mode page styling (index.html)
 
 /****click transitions****/
 
-input:checked +.card {
+.fliparoo {
   background: powderblue;
   -webkit-transform: rotateY(180deg);
 }
 
-input:checked +.card .trophy {
-  opacity: 1;
+.game-icon {
+  color:rgba(255,255,255,1);
   transition-delay: .5s;
-}
-
-input:checked +.card .star {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .ambulance {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .bomb {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .bike {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .cloud {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .eye {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .fire {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-input:checked +.card .bug {
-  opacity: 1;
-  transition-delay: .5s;
-}
-
-
-/****icon original state****/
-.trophy {
-  position: absolute;
-  margin: 47px 0 0 53px;
-  opacity: 0;
-}
-
-.star {
-  position: absolute;
-  margin: 47px 0 0 53px;
-  opacity: 0;
-}
-
-.ambulance {
-  position: absolute;
-  margin: 50px 0 0 43px;
-  opacity: 0;
-}
-
-.bomb {
-  position: absolute;
-  margin: 47px 0 0 53px;
-  opacity: 0;
-}
-
-.bike {
-  position: absolute;
-  margin: 47px 0 0 40px;
-  opacity: 0;
-}
-
-.cloud {
-  position: absolute;
-  margin: 47px 0 0 45px;
-  opacity: 0;
-}
-
-.eye {
-  position: absolute;
-  margin: 47px 0 0 46px;
-  opacity: 0;
-}
-
-.fire {
-  position: absolute;
-  margin: 47px 0 0 55px;
-  opacity: 0;
-}
-.bug {
-  position: absolute;
-  margin: 47px 0 0 50px;
-  opacity: 0;
 }
 
 /*********************************************************
@@ -283,6 +154,16 @@ footer
   /*border: 2px solid white;*/
   margin: 50px 0 20px 42%;
   padding: 10px 10px 5px 10px;
+  background: blue;
+  border-radius: .3em;
+}
+
+.enter-boxes {
+  display: block;
+
+  font-size: 1em;
+  /*border: 2px solid white;*/
+
   background: blue;
   border-radius: .3em;
 }
