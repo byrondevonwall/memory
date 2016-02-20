@@ -144,6 +144,8 @@ easy mode page styling (index.html)
 
 .match-card{
   background: limegreen;
+  -webkit-transform: rotateY(180deg);
+  box-shadow: 2px 2px 2px 2px darkblue;
 }
 
 .match-icon{
