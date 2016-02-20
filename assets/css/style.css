@@ -142,6 +142,28 @@ easy mode page styling (index.html)
   transition-delay: .5s;
 }
 
+.match-card{
+  background: limegreen;
+}
+
+.match-icon{
+  color:rgba(255,255,255,1);
+}
+
+.not-matched{
+  width: 10em;
+  height: 10em;
+  background: steelblue;
+  display: block;
+  transition: background 1s, -webkit-transform 1s;
+  border-radius: .4em;
+  border: 1px solid darkblue;
+  margin: 3px;
+  color: rgba(255,255,255,0);
+  text-align: center;
+  padding-top: 5%;
+}
+
 /*********************************************************
 footer
 **********************************************************/

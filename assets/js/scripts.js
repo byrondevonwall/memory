@@ -4,9 +4,9 @@ $(document).ready(function(){
   //this function populates the game body with a user selected # of cards
   $(".submit").on("click", function(){
     var boxAmt = 2 * Math.round(parseInt($(".boxNum").val())/2);
-    console.log(boxAmt);
     for (var b = 1; b <= boxAmt; b++){
-      $(".game-body").append("<span class='card'><i class='fa " + iconChoices[Math.floor(Math.random()*(200-0+1))+0] + " fa-4x'></i></span>");
+      $(".game-body").append("<span class='card'><i class='fa fa-heart fa-4x'></i></span>");
+      // $(".game-body").append("<span class='card'><i class='fa " + iconChoices[Math.floor(Math.random()*(200-0+1))+0] + " fa-4x'></i></span>");
       };
     if(boxAmt%5 === 0){
       $(".game-body").css({marginLeft : "20%", marginRight : "20%"});
@@ -24,14 +24,33 @@ $(document).ready(function(){
 
   //this function counts clicks and matches cards
   var count = 0;
+  var clickedBoxesArray = []
+
   $(".game-body").click(function(){
      count+=1;
-    if(count%2 === 0){
-      console.log($(this).children().children().attr('class'));
-      // $(".game-body").find(".fliparoo")[0].toggleClass("fliparoo")
-      // var card2 = $(".game-body").hasClass(".fliparoo")[1];
-      // console.log(card1, card2);
+     function logClicksCurrent(input){
+       clickedBoxesArray.push(input);
+     }
+     var clickDOM = $(".game-body").children()[count -1];
+     var clickVal = $(clickDOM).prop("innerHTML").text();
+     console.log(clickVal);
+     logClicksCurrent(clickVal);
+     var clickedBoxesCounter = clickedBoxesArray.length-1;
+     var prevClickedBoxCounter = clickedBoxesArray.length-2;
+      // console.log(clickedBoxesArray[clickedBoxesCounter];
+      // console.log(clickedBoxesArray[prevClickedBoxCounter]);
+      // console.log(clickedBoxesArray);
+
+    if(count%2 === 0 && clickedBoxesArray[clickedBoxesCounter] === clickedBoxesArray[prevClickedBoxCounter] && clickedBoxesArray[clickedBoxesCounter] != undefined && clickedBoxesArray[prevClickedBoxCounter] != undefined){
+      $(".game-body").find(".fliparoo").addClass("match-card");
+      $(".game-body").find(".match-card").addClass("match-icon");
+      // $(".game-body").find("match-card").remove();
+      // $(".game-body").find("match-card").remove();
     }
+    // else if(count%2 === 0 && clickedBoxesArray[clickedBoxesCounter] != clickedBoxesArray[prevClickedBoxCounter] && clickedBoxesArray[clickedBoxesCounter] != undefined && clickedBoxesArray[prevClickedBoxCounter] != undefined){
+    //   $(".game-body").find(".fliparoo").prop('onclick',null).off('click');
+    //   $(".game-body").find(".game-icon").prop('onclick',null).off('click');
+    // }
   });
 
 
