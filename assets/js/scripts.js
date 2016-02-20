@@ -1,8 +1,6 @@
 $(document).ready(function(){
   "use strict";
-
-
-
+  
   //this function populates the game body with a user selected # of -=RANDOM=- cards
   $(".submit").on("click", function(){
     var boxAmt = 2 * Math.round(parseInt($(".boxNum").val())/2);
