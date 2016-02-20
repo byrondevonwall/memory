@@ -37,9 +37,14 @@ $(document).ready(function(){
     else if(boxAmt%4 === 0){
       $(".game-body").css({marginLeft : "28%", marginRight : "20%"});
     }
+
+    //this section puts lives on the page
+      for (var l = 0; l<= boxAmt-1; l++){
+        $(".lives").append("<i class='fa fa-heart'></i>");
+      }
   });
 
-  //this function provides matching functionality
+  //this function provides matching functionality and tracks/removes lives
     var cards = []
     var count = 0
     var clickDisabled = false;
@@ -82,6 +87,9 @@ $(document).ready(function(){
        }, 200);
        }
       //  console.log(cards)
+      //this section counts and subtracts lives
+      var lives = [];
+
     });
 
 
