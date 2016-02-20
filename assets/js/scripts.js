@@ -1,6 +1,6 @@
 $(document).ready(function(){
   "use strict";
-  
+
   //this function populates the game body with a user selected # of -=RANDOM=- cards
   $(".submit").on("click", function(){
     var boxAmt = 2 * Math.round(parseInt($(".boxNum").val())/2);
@@ -39,36 +39,29 @@ $(document).ready(function(){
     }
   });
 
-  //this function flips all cards always forever and ever and is not the function youre looking for
-  // $(".game-body").on("click", ".card", function(){
-  //   $(this).toggleClass("fliparoo");
-  //   $(this.children).toggleClass("game-icon");
-  // });
-
   //this section tracks a first and second card,
     var cards = []
     var count = 0
     var clickDisabled = false;
-    //this section tracks card icon class info on each click
+
     $(".game-body").on("click", ".card", function(){
+      //this counts clicks and sets a click timeout to discourage cheating while items match
       if (clickDisabled){
         return;
       }
       count += 1;
+      //this section flips cards
       $(this).addClass("fliparoo");
       $(this).children().addClass("game-icon");
-
+      //this section tracks card icon class info on each click and pushes those classes to an array
       function trackCards(input){
         cards.push(input);
       }
-       trackCards($(this).children().prop('outerHTML'));
-
+      trackCards($(this).children().prop('outerHTML'));
+      //this section compares the currently clicked card and the previously clicked card based upon the placement of their class value in the array cards
        var card1Counter = cards.length-1;
        var card2Counter = cards.length-2;
-      //  console.log(cards);
-      //  console.log(cards[card1Counter]);
-      //  console.log( cards[card2Counter]);
-
+      //this section removes flipped status if the two cards flipped don't match
        if(count%2 === 0 && cards[card1Counter] != cards[card2Counter]){
          clickDisabled = true;
          setTimeout(function(){
@@ -77,6 +70,7 @@ $(document).ready(function(){
            $(".game-body").find(".game-icon").removeClass("game-icon");
          }, 1500);
        }
+       //this section adds matched status and removes flipped status if the two flipped cards match
        else if(count%2 === 0 && cards[card1Counter] === cards[card2Counter]){
          clickDisabled = true;
         setTimeout(function(){
@@ -87,7 +81,7 @@ $(document).ready(function(){
          $(".game-body").find(".game-icon").removeClass("game-icon");
        }, 200);
        }
-       console.log(cards)
+      //  console.log(cards)
     });
 
 
