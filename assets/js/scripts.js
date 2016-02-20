@@ -89,6 +89,12 @@ $(document).ready(function(){
       //  console.log(cards)
       //this section counts and subtracts lives
       var lives = [];
+      function countLives(input){
+        lives.push(input);
+      }
+      var livesCounter = $(".match-card").length;
+      countLives(livesCounter);
+      console.log(lives);
 
     });
 
