@@ -129,6 +129,8 @@ $(document).ready(function(){
 
        else if($(".lives i").length === 0 || $(".game-body").find(".match-card").length === boxAmt){
          $('.modal-container').addClass('showing');
+         $(".timer").remove();
+         $(".timer-finished").show();
        }
 
     });

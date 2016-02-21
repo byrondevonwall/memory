@@ -77,7 +77,11 @@ easy mode page styling (index.html)
   float: right;
   margin: 3% 15% 0 0;
 }
-
+.timer-finished{
+  display: none;
+  float: right;
+  margin: 3% 15% 0 0;
+}
 .lives {
   display: inline-block;
   margin: 3% 0 0 15%;
@@ -116,7 +120,7 @@ easy mode page styling (index.html)
   box-shadow: 2px 2px 2px 2px darkblue;
 }
 
-/****click transitions****/
+/****click functions****/
 
 .fliparoo {
   background: powderblue;
@@ -172,17 +176,19 @@ modal styling
 
 .modal {
   position: fixed;
-  top: 2em;
-  left: 2em;
-  bottom: 2em;
-  right: 2em;
-  background: blue;
+  top: 10em;
+  left: 36em;
+  bottom: 30em;
+  right: 36em;
+  background: rgb(113, 194, 194);
   border: 1px solid #AAA;
   padding: 2em;
   color: white;
   font-family:  sans-serif;
 }
-
+.modal h1 {
+  margin-left: 31%;
+}
 .modal-close {
   position: absolute;
   top: 0.5em;
@@ -195,7 +201,7 @@ modal styling
 .refresh-page {
   position: absolute;
   top: 80%;
-  right: 50%;
+  right: 38%;
   background: white;
   border: 1px solid black;
 
@@ -211,7 +217,7 @@ footer
   text-align: center;
   font-size: 2em;
   /*border: 2px solid white;*/
-  margin: 50px 0 20px 10%;
+  margin: 50px 15% 20px 15%;
   padding: 10px 10px 5px 10px;
   background: rgb(113, 194, 194);
   border-radius: .3em;
@@ -221,7 +227,7 @@ footer
 
 .return-to-menu:hover {
   -webkit-transition-property: background;
-  background: cornflowerblue;
+  background: rgb(143, 249, 245);
   box-shadow: 2px 2px 2px 2px steelblue;
 
 
