@@ -2,14 +2,18 @@
 
 $(document).ready(function(){
   "use strict";
-
-
+  //global variables
+  var boxAmt = 0
   //this function populates the game body with a user selected # of -=RANDOM=- cards, starts the timer, and adds lives
   $(".submit").on("click", function(){
+    //hides submit ribbon aand shows reset button
+    $(".header").hide();
+    $(".ribbon").hide()
+    $(".return-to-menu").show();
     //comparison clock needed for timer
     var start = new Date().getTime();
     //user input #of boxes, rounded for functionality
-    var boxAmt = 2 * Math.round(parseInt($(".boxNum").val())/2);
+    boxAmt = 2 * Math.round(parseInt($(".boxNum").val())/2);
     //this section creates an array of the approriate length consisting of randomly selected icons
     var boxArrayCounter = boxAmt/2;
     var iconArray = [];
@@ -47,7 +51,7 @@ $(document).ready(function(){
 
     // this section puts lives on the page.
       for (var l = 0; l<= boxAmt-1; l++){
-        $(".lives").append("<i class='fa fa-heart fa-2x'></i>");
+        $(".lives").append("<i class='fa fa-heart'></i>");
       }
       console.log($(".lives i").last());
 
@@ -104,8 +108,8 @@ $(document).ready(function(){
            $(".game-body").find(".fliparoo").removeClass("fliparoo");
            $(".game-body").find(".game-icon").removeClass("game-icon");
            $(".lives i").last().remove();
-           $(".lost-lives").append("<i class='fa fa-heart-o fa-2x'></i>")
-           console.log($(".lives i").length);
+           $(".lost-lives").append("<i class='fa fa-heart-o'></i>");
+
          }, 1500);
        }
        //this section adds matched status and removes flipped status if the two flipped cards match
@@ -117,11 +121,35 @@ $(document).ready(function(){
          $(".game-body").find(".game-icon").addClass("match-icon");
          $(".game-body").find(".fliparoo").removeClass("fliparoo");
          $(".game-body").find(".game-icon").removeClass("game-icon");
-         console.log($(".game-body").find(".match-card").length);
+
        }, 200);
+       }
+      //  var lifeCount = $(".lives i").length;
+      //  var matchCount = $(".game-body").find(".match-card").length;
+
+       else if($(".lives i").length === 0 || $(".game-body").find(".match-card").length === boxAmt){
+         $('.modal-container').addClass('showing');
        }
 
     });
+
+    $(".return-to-menu").on("click", function(){
+      location.reload();
+    })
+
+    $(".refresh-page").on("click", function(){
+      location.reload();
+    });
+
+    $('.modal-close, .modal-container').on('click', function () {
+      $('.modal-container').removeClass('showing');
+    });
+
+    $('.modal').click(function (e) {
+      e.stopPropagation();
+    });
+
+
 
 
   //this is a list of icons

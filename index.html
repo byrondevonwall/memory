@@ -1,48 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MEMORY</title>
-    <link href="./assets/css/reset.css" rel="stylesheet">
-    <link href="./assets/css/style.css" rel="stylesheet">
-    <link href="./assets/css/animations.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  </head>
-  <body>
-    <audio src="./assets/audio/got-theme.mp3"></audio>
-    <div id="entrance-animation" class="fadeIn">
-    <header>
-        <div class="header">
-          <div class="memory-name">
-            <span>Mem</span><i class="fa fa-lightbulb-o"></i><span>ry</span>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>MEMORY</title>
+      <link href="./assets/css/reset.css" rel="stylesheet">
+      <link href="./assets/css/style.css" rel="stylesheet">
+      <link href="./assets/css/animations.css" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    </head>
+    <body>
+      <audio src="./assets/audio/got-theme.mp3"></audio>
+      <header>
+          <span class="ribbon"></span>
+          <div class="header">
+            <div class="memory-name">
+              <span>Mem</span><i class="fa fa-lightbulb-o"></i><span>ry</span>
+          </div>
+          <div class="game-description">-=A GAME=-</div>
+          <div class="enter-boxes">NUMBER OF TILES:</div>
+            <input type="text" value="" class="boxNum"><input class="submit" type="submit" value="PLAY GAME">
+        </div>
+      </header>
+
+      <span class="livesWrap"><span class="lives"></span><span class="lost-lives"><span class="timer"></span></span>
+      <!-- <span class="timer"></span> -->
+
+      <section class="game-body group">
+      </section>
+
+      <div class="modal-container">
+        <div class="modal">
+          <!-- <button class="modal-close">X</button> -->
+          <h1>Game Over</h1>
+          <button class="refresh-page">New Game</button>
         </div>
       </div>
 
 
-    </header>
-
-  <div class="enter-boxes">HOW MANY BOXES DO YOU WANT?</div>
-    <input type="text" value="" class="boxNum">
-
-    <input class="submit" type="submit" value="gimme boxes">
-
-    <div class="livesWrap"><span class="lives"></span><span class="lost-lives"></s</div>
-    <span class="timer"></span>
 
 
-    <section class="game-body group">
+      <footer>
+        <nav>
+          <a href="#"><div class="return-to-menu">Restart game</div></a>
+        </nav>
+      </footer>
+    </div>
 
-    </section>
-  </main>
-
-    <footer>
-      <nav>
-        <a href="new-game.html"><div class="return-to-menu">Restart game</div></a>
-      </nav>
-    </footer>
-  </div>
-
-  <script src="./assets/js/scripts.js"></script>
-  </body>
-</html>
+    <script src="./assets/js/scripts.js"></script>
+    </body>
+  </html>

@@ -6,7 +6,7 @@ element and cross-page styling
 }
 
 body {
-  background: blue;
+  background: rgb(113, 194, 194);
   font-family: 'Orbitron', sans-serif;
   color: white
 }
@@ -17,64 +17,54 @@ a {
 }
 
 
+/*********************************************************
+landing screen styling
+**********************************************************/
+
+
+.ribbon{
+  display: inline-block;
+  margin: auto;
+  background: yellow;
+  position: absolute;
+  z-index: -1;
+  transform: rotateZ(160deg);
+  background: rgb(143, 249, 245);
+  width: 20%;
+  height: 300%;
+  overflow: hidden;
+  top:-80%;
+  left: 20%;
+}
 
 .memory-name {
   text-align: justify;
   font-family: 'Orbitron', sans-serif;
   color: white;
   font-size: 4em;
+  margin: 4% 8% 0% 8.5%;
 }
 
-
-/*********************************************************
-new-game page styling
-**********************************************************/
-
-.choice-menu {
-  display: inline-block;
-  margin: 10% 0 0 40%;
+.game-description{
+  display: block;
+  margin: 4% 8% 5% 16%;
 }
 
-
-.new-game-text {
-  display: inline-block;
-  margin: 0 0 0 40px;
-  padding: 40px 0 0 0;
-  text-align: center;
-  font-size: 2em;
+.enter-boxes {
+  display: block;
+  font-size: 1.5em;
+  /*border: 2px solid white;*/
+  border-radius: .3em;
+  margin: 0% 8% 0% 14%;
 }
 
-.easy-mode-box {
-  text-align: center;
-  font-size: 2em;
-  border: 2px solid white;
-  margin: 50px 0 0 20px;
-  padding: 10px 0;
-  background: blue;
-  transform: perspective(200px) rotateY(-15deg)
+.boxNum{
+  display: block;
+  margin: 0% 8% 0% 18.5%;
 }
-
-.hard-mode-box {
-  text-align: center;
-  font-size: 2em;
-  border: 2px solid white;
-  margin: 20px 0 0 20px;
-  padding: 10px 0;
-  background: blue;
-  transform: perspective(200px) rotateY(15deg)
-  /*add transform here*/
+.submit{
+    margin: 6% 8% 0% 23.5%;
 }
-
-.easy-mode-box:hover {
-  -webkit-transition-property: background;
-  background: paleturquoise;
-}
-
-.hard-mode-box:hover {
-  -webkit-transition-property: background;
-  background: turquoise;
-}
-
 
 /*********************************************************
 easy mode page styling (index.html)
@@ -82,19 +72,15 @@ easy mode page styling (index.html)
 
 /****header****/
 
-.easy-mode-header {
-  display: block;
-  margin: 0 0 0 40%;
-}
-
-.heart-row {
-  display: inline-block;
-  margin: 0 0 0 16%;
-}
 
 .timer {
   float: right;
-  margin: 0 16% 0 0;
+  margin: 3% 15% 0 0;
+}
+
+.lives {
+  display: inline-block;
+  margin: 3% 0 0 15%;
 }
 
 /****game body****/
@@ -167,30 +153,71 @@ easy mode page styling (index.html)
 }
 
 /*********************************************************
+modal styling
+**********************************************************/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-container.showing {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  bottom: 2em;
+  right: 2em;
+  background: blue;
+  border: 1px solid #AAA;
+  padding: 2em;
+  color: white;
+  font-family:  sans-serif;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  border-radius: 2em;
+  background: #EEE;
+  border: 1px solid #AAA;
+}
+
+.refresh-page {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  background: white;
+  border: 1px solid black;
+
+}
+
+/*********************************************************
 footer
 **********************************************************/
 
 
 .return-to-menu {
-  display: inline-block;
+  display: none;
   text-align: center;
   font-size: 2em;
   /*border: 2px solid white;*/
-  margin: 50px 0 20px 42%;
+  margin: 50px 0 20px 10%;
   padding: 10px 10px 5px 10px;
-  background: blue;
+  background: rgb(113, 194, 194);
   border-radius: .3em;
 }
 
-.enter-boxes {
-  display: block;
 
-  font-size: 1em;
-  /*border: 2px solid white;*/
-
-  background: blue;
-  border-radius: .3em;
-}
 
 .return-to-menu:hover {
   -webkit-transition-property: background;
