@@ -249,7 +249,7 @@ clearfix (experimental-prolly not relevant)
 /*********************************************************
 media queries
 **********************************************************/
-
+/*
 @media (max-width: 1420px) {
   .game-body{
     width: 2000px;
@@ -266,7 +266,7 @@ media queries
   .margin-fix-2 {
     margin: 2% 0 0 23%;
   }
-}
+}*/
 
 
 
