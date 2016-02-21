@@ -42,7 +42,10 @@ $(document).ready(function(){
     for (var b = 1; b <= boxAmt; b++){
       $(".game-body").append("<span class='card'><i class='fa "+ finalArray[b-1] +" fa-4x'></i></span>")}
     //this section insures that the grid of cards is always a rectangle(no ragged bottom)(currently not working with media queries)
-    if(boxAmt%5 === 0){
+    if(boxAmt%6 === 0){
+      $(".game-body").css({marginLeft : "15%", marginRight : "15%"});
+    }
+    else if(boxAmt%5 === 0){
       $(".game-body").css({marginLeft : "20%", marginRight : "20%"});
     }
     else if(boxAmt%4 === 0){
