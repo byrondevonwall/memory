@@ -38,10 +38,11 @@ $(document).ready(function(){
       $(".game-body").css({marginLeft : "28%", marginRight : "20%"});
     }
 
-    //this section puts lives on the page
+    // this section puts lives on the page
       for (var l = 0; l<= boxAmt-1; l++){
-        $(".lives").append("<i class='fa fa-heart'></i>");
+        $(".lives").append("<i class='fa fa-heart fa-2x'></i>");
       }
+      console.log($(".lives i").last());
   });
 
   //this function provides matching functionality and tracks/removes lives
@@ -73,6 +74,9 @@ $(document).ready(function(){
            clickDisabled = false;
            $(".game-body").find(".fliparoo").removeClass("fliparoo");
            $(".game-body").find(".game-icon").removeClass("game-icon");
+           $(".lives i").last().remove();
+           $(".lost-lives").append("<i class='fa fa-heart-o fa-2x'></i>")
+           console.log($(".lives i").length);
          }, 1500);
        }
        //this section adds matched status and removes flipped status if the two flipped cards match
@@ -84,17 +88,18 @@ $(document).ready(function(){
          $(".game-body").find(".game-icon").addClass("match-icon");
          $(".game-body").find(".fliparoo").removeClass("fliparoo");
          $(".game-body").find(".game-icon").removeClass("game-icon");
+         console.log($(".game-body").find(".match-card").length);
        }, 200);
        }
       //  console.log(cards)
-      //this section counts and subtracts lives
-      var lives = [];
-      function countLives(input){
-        lives.push(input);
-      }
-      var livesCounter = $(".match-card").length;
-      countLives(livesCounter);
-      console.log(lives);
+      //this section counts and subtracts lives and is experimental
+      // var lives = [];
+      // function countLives(input){
+      //   lives.push(input);
+      // }
+      // var livesCounter = $(".match-card").length;
+      // countLives(livesCounter);
+      // console.log(lives);
 
     });
 
