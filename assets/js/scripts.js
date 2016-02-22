@@ -6,7 +6,7 @@ $(document).ready(function(){
   var boxAmt = 0
   //this function populates the game body with a user selected # of -=RANDOM=- cards, starts the timer, and adds lives
   $(".submit").on("click", function(){
-    //hides submit ribbon aand shows reset button
+    //hides submit ribbon and shows reset button
     $(".header").hide();
     $(".ribbon").hide()
     $(".return-to-menu").show();
@@ -22,7 +22,8 @@ $(document).ready(function(){
     }
     var newArray = $.merge([], iconArray);
     var finalArray = $.merge(newArray, iconArray);
-    //this section shuffles that array so that placement is random in the document
+
+    //this section shuffles that array so that placement is random in the document(modified from stack overflow)
     function shuffle(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
       // While there remain elements to shuffle...
@@ -56,7 +57,7 @@ $(document).ready(function(){
       for (var l = 0; l<= boxAmt-1; l++){
         $(".lives").append("<i class='fa fa-heart'></i>");
       }
-      console.log($(".lives i").last());
+      // console.log($(".lives i").last());
 
     //this section starts a timer when the game parameters are submitted.  With thanks to Andrew and Dennis
     setInterval(function() {
@@ -84,7 +85,7 @@ $(document).ready(function(){
   //this function provides matching functionality and tracks/removes lives
     var cards = []
     var count = 0
-    var clickDisabled = false;
+    var clickDisabled = false;//many thanks to Dennis and Andrew for this functionality
 
     $(".game-body").on("click", ".card", function(){
       //this counts clicks and sets a click timeout to discourage cheating while items match
@@ -162,7 +163,14 @@ $(document).ready(function(){
 
 });//close js
 
-
+//this code is experimental and will help to make sure there are no repeated random icons, code is modified from stack overflow.
+//     function uniques(arr) {
+//     var a = [];
+//     for (var i=0, l=arr.length; i<l; i++)
+//         if (a.indexOf(arr[i]) === -1 && arr[i] !== '')
+//             a.push(arr[i]);
+//     return a;
+// }
 
 
 //theoretical and non-working hard/easy mode implementation
